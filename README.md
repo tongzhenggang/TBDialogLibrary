@@ -7,7 +7,6 @@
  
 1. Add it in your root build.gradle ：
  ```java
-     
  allprojects {
      repositories {
          ...
@@ -26,7 +25,8 @@ dependencies {
 }
 ```
 
-```忽略com.android.support:appcompat-v7:25.3.1配置引用方法
+3. 忽略com.android.support:appcompat-v7:25.3.1配置引用方法（一般情况不需要使用该方式）
+```java
     compile('com.github.tongzhenggang:TBDialogLibrary:1.0') {
         exclude(group: 'com.android.support', module: 'appcompat-v7')
     }
