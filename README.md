@@ -9,7 +9,7 @@
  ```java
      
  allprojects {
-     epositories {
+     repositories {
          ...
          maven {
              url 'https://jitpack.io'
@@ -26,6 +26,11 @@ dependencies {
 }
 ```
 
+```忽略com.android.support:appcompat-v7:25.3.1配置引用方法
+    compile('com.github.tongzhenggang:TBDialogLibrary:1.0') {
+        exclude(group: 'com.android.support', module: 'appcompat-v7')
+    }
+```
 
 ---
 
