@@ -1,6 +1,6 @@
 # TBDialogLibrary
 地址：https://github.com/tongzhenggang/TBDialogLibrary
-对Android的底部弹窗、顶部弹窗菜单及自定义界面的使用封装。（封装基于HMY314的PopWindow）
+对Android的底部弹窗、顶部弹窗菜单及自定义界面的使用封装。
 
 ----------
 ## 一、配置
@@ -31,8 +31,6 @@ dependencies {
 
 ## 二、使用方法
 
-第一种
-
     PopWindow popWindow = new PopWindow.Builder(this)
                 .setStyle(PopWindow.PopWindowStyle.PopUp)
                 .setTitle("注意")
@@ -56,5 +54,9 @@ dependencies {
         popWindow.show();
 
   效果图：
- ![](https://github.com/tongzhenggang/TBDialogLibrary/other/show1.png)
+ ![](https://github.com/tongzhenggang/TBDialogLibrary/blob/master/other/show1.png)
+
+
+
+说明：封装基于HMY314的PopWindow
 
