@@ -1,6 +1,7 @@
 package com.tzg.popwindow.view;
 
 import android.content.Context;
+import android.graphics.drawable.ColorDrawable;
 import android.util.AttributeSet;
 import android.view.Gravity;
 import android.view.View;
@@ -51,6 +52,8 @@ public class PopUpView extends LinearLayout implements PopViewInterface {
         addView(mContanierLl, new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT));
 
         initTextAndMessage();
+
+
     }
 
     private void initTextAndMessage() {

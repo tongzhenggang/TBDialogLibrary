@@ -1,6 +1,11 @@
 package com.tzg.popwindow;
 
 import android.app.Activity;
+import android.graphics.Color;
+import android.graphics.Rect;
+import android.graphics.drawable.ColorDrawable;
+import android.os.Build;
+import android.view.Gravity;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -41,11 +46,14 @@ public class PopWindow implements PopWindowInterface,
         setMessage(message);
         setStyle(style);
         initPopWindow(activity, title, message);
+
     }
 
     public PopWindow(Activity activity) {
         mActivity = activity;
         initPopWindow(activity, null, null);
+
+
     }
 
     private void initPopWindow(Activity activity, CharSequence title, CharSequence message) {
@@ -56,6 +64,8 @@ public class PopWindow implements PopWindowInterface,
         } else if (mStyle == PopWindowStyle.PopAlert) {
             mPopAlertDialog = new PopAlertDialog(activity, title, message, this);
         }
+
+
     }
 
     public void setTitle(CharSequence title) {
@@ -280,6 +290,7 @@ public class PopWindow implements PopWindowInterface,
 
     public void show() {
         show(null);
+
     }
 
     public void show(View view) {
@@ -327,4 +338,7 @@ public class PopWindow implements PopWindowInterface,
     public enum PopWindowStyle {
         PopUp, PopDown, PopAlert
     }
+
+
+
 }

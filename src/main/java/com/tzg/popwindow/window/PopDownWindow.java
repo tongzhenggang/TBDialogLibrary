@@ -2,6 +2,11 @@ package com.tzg.popwindow.window;
 
 import android.app.Activity;
 import android.content.Context;
+import android.graphics.Rect;
+import android.graphics.drawable.ColorDrawable;
+import android.graphics.drawable.Drawable;
+import android.os.Build;
+import android.view.Gravity;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -46,6 +51,7 @@ public class PopDownWindow extends PopupWindow implements PopWindowInterface, Vi
 
     public PopDownWindow(Activity activity, int titleResId, int messageResId, PopWindow popWindow) {
         this(activity, titleResId == 0 ? null : activity.getString(titleResId), messageResId == 0 ? null : activity.getString(messageResId), popWindow);
+
     }
 
     public PopDownWindow(Activity activity, CharSequence title, CharSequence message, PopWindow popWindow) {
@@ -66,6 +72,8 @@ public class PopDownWindow extends PopupWindow implements PopWindowInterface, Vi
         initContentView(mPopWindowLayout, title, message);
         setListener();
         initAnim();
+
+
     }
 
     private void initRootView(View view) {
@@ -248,4 +256,7 @@ public class PopDownWindow extends PopupWindow implements PopWindowInterface, Vi
     public void onStartShow(PopWindowInterface popWindowInterface) {
         mPopWindow.onStartShow(popWindowInterface);
     }
+
+
+
 }

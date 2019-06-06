@@ -5,7 +5,9 @@ import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.res.Resources;
+import android.graphics.drawable.ColorDrawable;
 import android.util.DisplayMetrics;
+import android.view.Gravity;
 import android.view.View;
 import android.view.WindowManager;
 import android.view.animation.Animation;
@@ -56,6 +58,9 @@ public class PopUpWindow extends Dialog implements PopWindowInterface, DialogInt
         initRootView();
         initContentView(title, message);
         initAnim();
+
+
+
     }
 
     private void initRootView() {
