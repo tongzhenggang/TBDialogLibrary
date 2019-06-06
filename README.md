@@ -21,13 +21,13 @@
 2. Add the dependency
 ```java
 dependencies {
-	 compile 'com.github.tongzhenggang:TBDialogLibrary:1.0'
+	 implementation 'com.github.tongzhenggang:TBDialogLibrary:1.1'
 }
 ```
 
 3. 忽略com.android.support:appcompat-v7:25.3.1配置引用方法（一般情况不需要使用该方式）
 ```java
-    compile('com.github.tongzhenggang:TBDialogLibrary:1.0') {
+    implementation('com.github.tongzhenggang:TBDialogLibrary:1.1') {
         exclude(group: 'com.android.support', module: 'appcompat-v7')
     }
 ```
